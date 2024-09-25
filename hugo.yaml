@@ -49,7 +49,7 @@ params:
     enable: false
 
   comments:
-    enable: true
+    enable: false
     type: giscus
 
     giscus:
