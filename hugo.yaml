@@ -47,3 +47,13 @@ params:
 
   editURL:
     enable: false
+
+  comments:
+    enable: true
+    type: giscus
+
+    giscus:
+      repo: andresuchdata/andresuchdata.github.io
+      repoId: 862709944
+      category: Blog
+      categoryId: 42669992
