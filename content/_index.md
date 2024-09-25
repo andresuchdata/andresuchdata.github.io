@@ -1,17 +1,17 @@
 ---
-title: My Site
+title: Welcome!
 toc: false
 ---
 
-This is the landing page.
+Hello All!
 
-## Explore
+This is my personal website, where I share my thoughts, experiences, and projects related to software development.
+
+I'll also update this website with my personal and professional experiences.
+
+Stay tuned for more updates!
 
 {{< cards >}}
-  {{< card link="docs" title="Docs" icon="book-open" >}}
   {{< card link="about" title="About" icon="user" >}}
+  {{< card link="blog" title="Personal blog" icon="book-open" >}}
 {{< /cards >}}
-
-## Documentation
-
-For more information, visit [Hextra](https://imfing.github.io/hextra).

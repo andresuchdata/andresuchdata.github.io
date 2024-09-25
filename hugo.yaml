@@ -1,5 +1,4 @@
-# Hugo configuration file
-title: My Site
+title: Andre Suchitra - Official Website
 
 # import hextra as module
 module:
@@ -18,14 +17,14 @@ markup:
 
 menu:
   main:
-    - name: Docs
-      pageRef: /docs
-      weight: 1
     - name: About
       pageRef: /about
+      weight: 1
+    - name: Blogs
+      pageRef: /blog
       weight: 2
     - name: Contact ↗
-      url: "https://github.com/imfing"
+      url: "https://linkedin.com/in/andresuchitra"
       weight: 3
     - name: Search
       weight: 4
@@ -33,14 +32,9 @@ menu:
         type: search
     - name: GitHub
       weight: 5
-      url: "https://github.com/imfing/hextra-starter-template"
+      url: "https://github.com/andresuchdata/andresuchdata.github.io"
       params:
         icon: github
-    - name: Twitter
-      weight: 6
-      url: "https://twitter.com/"
-      params:
-        icon: x-twitter
 
 params:
   navbar:
@@ -52,5 +46,4 @@ params:
     displayPoweredBy: true
 
   editURL:
-    enable: true
-    base: "https://github.com/imfing/hextra-starter-template/edit/main/content"
+    enable: false
