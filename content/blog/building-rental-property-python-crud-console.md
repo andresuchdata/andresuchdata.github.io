@@ -62,8 +62,8 @@ To get started, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone <repository-url>
-   cd rental-property
+   git clone https://github.com/andresuchdata/python-crud-json.git
+   cd python-crud-json
    ```
 
 2. **Create a Virtual Environment and Install Dependencies**:

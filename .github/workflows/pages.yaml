@@ -54,10 +54,14 @@ jobs:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
+          HUGO_BASEURL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+          GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
+          GISCUS_REPO_ID: ${{ secrets.GISCUS_REPO_ID }}
+          GISCUS_CATEGORY_ID: ${{ secrets.GISCUS_CATEGORY_ID }}
         run: |
           hugo \
             --gc --minify \
-            --baseURL "https://andresuchdata.github.io/"
+            --baseURL "${{ env.HUGO_BASEURL }}"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

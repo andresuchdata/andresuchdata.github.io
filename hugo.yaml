@@ -1,4 +1,7 @@
-title: Andre Suchitra - Official Website
+title: Andre Suchitra - Official
+baseURL: ${HUGO_BASE_URL}
+
+enableRobotsTXT: true
 
 # import hextra as module
 module:
@@ -15,9 +18,13 @@ markup:
   highlight:
     noClasses: false
 
+services:
+  googleAnalytics:
+    ID: ${HUGO_GOOGLE_ANALYTICS_ID}
+
 menu:
   main:
-    - name: About
+    - name: About Me
       pageRef: /about
       weight: 1
     - name: Blogs
@@ -32,18 +39,24 @@ menu:
         type: search
     - name: GitHub
       weight: 5
-      url: "https://github.com/andresuchdata/andresuchdata.github.io"
+      url: "https://github.com/andresuchdata"
       params:
         icon: github
 
 params:
+  blog:
+    list:
+      displayTags: true
+      sortBy: date
+      sortOrder: desc
+
   navbar:
     displayTitle: true
     displayLogo: false
 
   footer:
-    displayCopyright: false
-    displayPoweredBy: true
+    displayCopyright: true
+    displayPoweredBy: false
 
   editURL:
     enable: false
@@ -51,9 +64,3 @@ params:
   comments:
     enable: false
     type: giscus
-
-    giscus:
-      repo: andresuchdata/andresuchdata.github.io
-      repoId: 862709944
-      category: Blog
-      categoryId: 42669992
