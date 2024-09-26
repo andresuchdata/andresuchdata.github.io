@@ -47,8 +47,8 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Debug variables
         env:
-          HUGO_GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
-          HUGO_BASEURL: ${{ secrets.BASE_URL }}
+          HUGO_GOOGLE_ANALYTICS_ID: ${{ vars.GOOGLE_ANALYTICS_ID }}
+          HUGO_BASEURL: ${{ vars.BASE_URL }}
         run: env
       - name: Setup Hugo
         run: |
