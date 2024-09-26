@@ -20,7 +20,7 @@ markup:
 
 services:
   googleAnalytics:
-    ID: ${HUGO_GOOGLE_ANALYTICS_ID}
+    ID: os.Getenv("HUGO_GOOGLE_ANALYTICS_ID")
 
 menu:
   main:
