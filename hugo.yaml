@@ -20,7 +20,7 @@ markup:
 
 services:
   googleAnalytics:
-    ID: ${HUGO_GOOGLE_ANALYTICS_ID}
+    ID: G-XV2K5B4TED
 
 menu:
   main:
