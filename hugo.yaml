@@ -3,10 +3,11 @@ baseURL: ${HUGO_BASE_URL}
 
 enableRobotsTXT: true
 
-# import hextra as module
+# import hextra and utterances (for commenting system) as module
 module:
   imports:
   - path: github.com/imfing/hextra
+  - path: github.com/hugomods/utterances
 
 markup:
   # allow raw html
@@ -62,5 +63,10 @@ params:
     enable: false
 
   comments:
-    enable: false
-    type: giscus
+    enable: true
+    type: utterances
+  
+    utterances:
+      repo: andresuchdata/andresuchdata.github.io
+      issueTerm: pathname
+      crossorigin: anonymous

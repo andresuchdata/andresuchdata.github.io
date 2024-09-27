@@ -1,0 +1,23 @@
+{{- $lang := site.Language.LanguageCode | default "en" -}}
+
+{{- with site.Params.comments.utterances -}}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const attributes = {
+          "src": "https://utteranc.es/client.js",
+          "repo": "{{ .repo }}",
+          "issue-term": "{{ .issueTerm }}",
+          "crossorigin": "anonymous",
+          "async": "true",
+        };
+    
+        // Dynamically create script tag
+        const utterancesScript = document.createElement("script");
+        Object.entries(attributes).forEach(([key, value]) => utterancesScript.setAttribute(key, value));
+        document.getElementById('utterances').appendChild(utterancesScript);
+    });
+</script>
+<div id="utterances" class="utterances"></div>
+{{- else -}}
+  {{ warnf "utterances is not configured" }}
+{{- end -}}
