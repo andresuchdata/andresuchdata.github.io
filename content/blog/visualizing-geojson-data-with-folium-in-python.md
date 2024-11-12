@@ -47,7 +47,7 @@ Here's a simple example of a GeoJSON Point:
 Here is the sample of GeoJSON data shapes:
 
 <figure>
-  <img src="/images/geojson-sample.jpg" alt="GeoJSON Sample">
+  <img src="https://res.cloudinary.com/dydfb6u1x/image/upload/f_auto,q_auto/v1/blog/geojson/geojson-sample" alt="GeoJSON Sample">
   <figcaption>GeoJSON Sample</figcaption>
 </figure>
 
@@ -62,7 +62,7 @@ Here is the sample of GeoJSON data shapes:
 > **Try it out**: Go to [geojson.io](https://geojson.io) to play around with your own geographic shapes and features!
 
 <figure>
-  <img src="/images/geojson-io-home.jpg" alt="Geojson.io Homepage">
+  <img src="https://res.cloudinary.com/dydfb6u1x/image/upload/f_auto,q_auto/v1/blog/geojson/geojson-io-home" alt="Geojson.io Homepage">
   <figcaption>Geojson.io Homepage</figcaption>
 </figure>
 
@@ -144,7 +144,7 @@ A closed shape defined by a series of coordinates where the first and last point
 Here is the sample of Polygon shape:
 
 <figure>
-  <img src="/images/geojson-polygon-1.jpg" alt="GeoJSON Polygon">
+  <img src="https://res.cloudinary.com/dydfb6u1x/image/upload/f_auto,q_auto/v1/blog/geojson/geojson-polygon-1" alt="GeoJSON Polygon">
   <figcaption>GeoJSON Polygon shape layered on top of Java map</figcaption>
 </figure>
 
