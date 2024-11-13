@@ -45,9 +45,6 @@ menu:
         icon: github
 
 params:
-  head:
-    custom: |
-      <meta name="google-adsense-account" content="ca-pub-7406598396081746">
   blog:
     list:
       displayTags: true

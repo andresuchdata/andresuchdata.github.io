@@ -1,0 +1,4 @@
+{{ $posts := where .Site.RegularPages "Section" "blog" }}
+{{ range first 10 $posts }}
+* [{{ .Title }}]({{ .RelPermalink }}) - {{ .Date.Format "January 2, 2006" }}
+{{ end }}

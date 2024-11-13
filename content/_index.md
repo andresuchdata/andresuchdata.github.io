@@ -1,5 +1,5 @@
 ---
-title: Welcome!
+title: Welcome to Andre Suchitra!
 toc: false
 ---
 
@@ -15,3 +15,9 @@ Stay tuned for more updates!
   {{< card link="about" title="About" icon="user" >}}
   {{< card link="blog" title="Personal blog" icon="book-open" >}}
 {{< /cards >}}
+
+## Latest Blog Posts
+
+{{% recent-posts %}}
+
+
