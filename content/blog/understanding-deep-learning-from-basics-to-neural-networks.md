@@ -257,6 +257,18 @@ def neuron_calculation(inputs, weights, bias):
   - The bias term helps balance this out
 
 **Activation Functions in Action**
+
+Why do neural networks need activation functions? Without them, neural networks would just be a series of linear transformations, no matter how many layers we add! Activation functions introduce non-linearity, allowing networks to learn complex patterns and relationships in data.
+
+Think of it this way: if you're trying to draw a curved line using only straight lines, you'll need many short straight segments to approximate the curve. Activation functions let our network create those "curves" naturally.
+
+<figure>
+  <img src="https://miro.medium.com/v2/resize:fit:3200/format:webp/1*w48zY6o9_5W9iesSsNabmQ.gif" height="200">
+  <figcaption>Activation functions sample. Source: <a href="https://medium.com/analytics-vidhya/activation-functions-all-you-need-to-know-355a850d025e">Analytics Vidhya</a></figcaption>
+</figure>
+
+Here are the most common activation functions and their use cases:
+
 ```python
 # Common activation functions explained
 import numpy as np
@@ -307,111 +319,6 @@ Here's a snippet from 3Blue1Brown's [Neural Networks](https://www.youtube.com/wa
     <p>Watching the activations in each layer propagate through to determine the digit.</p>
   </figcaption>
 </figure>
-
-
-## Neural Networks in Action: Price Prediction
-
-Let's examine how a neural network predicts house prices. We'll use Python with TensorFlow:
-
-```python
-import tensorflow as tf
-from tensorflow.keras import layers
-
-# Define the model
-model = tf.keras.Sequential([
-    layers.Dense(64, activation='relu', input_shape=(n_features,)),
-    layers.Dense(32, activation='relu'),
-    layers.Dense(1)
-])
-```
-
-### The Math Behind Predictions
-
-For each neuron, the following calculations occur:
-
-1. **Weighted Sum**:
-```python
-z = Σ(w_i * x_i) + b
-```
-Where:
-- w_i = weights
-- x_i = input features
-- b = bias term
-
-2. **Activation Function (ReLU)**:
-```python
-a = max(0, z)
-```
-
-3. **Forward Propagation**:
-For a simple price prediction:
-
-```python
-def forward_propagation(X, weights, biases):
-    # First hidden layer
-    z1 = np.dot(X, weights['h1']) + biases['b1']
-    a1 = np.maximum(0, z1)  # ReLU activation
-    
-    # Second hidden layer
-    z2 = np.dot(a1, weights['h2']) + biases['b2']
-    a2 = np.maximum(0, z2)  # ReLU activation
-    
-    # Output layer
-    z3 = np.dot(a2, weights['out']) + biases['out']
-    return z3  # Linear activation for regression
-```
-
-### Training Process
-
-The network learns through:
-
-1. **Loss Calculation**:
-```python
-loss = mean_squared_error(y_true, y_pred)
-```
-
-2. **Backpropagation**:
-```python
-# Gradient calculation
-with tf.GradientTape() as tape:
-    predictions = model(features)
-    loss = loss_function(labels, predictions)
-gradients = tape.gradient(loss, model.trainable_variables)
-```
-
-## Advantages Over Traditional Models
-
-Neural networks offer several benefits compared to traditional regression and tree-based models:
-
-1. **Complex Pattern Recognition**
-- Can capture non-linear relationships
-- Automatically learns feature interactions
-- Handles high-dimensional data effectively
-
-2. **Feature Learning**
-- No manual feature engineering required
-- Learns hierarchical representations
-- Adapts to new patterns in data
-
-3. **Flexibility**
-- Easy to modify architecture
-
-You can change the structure of layers to suit your needs, like below:
-
-```python
-# Easy to modify architecture
-model = tf.keras.Sequential([
-    layers.Dense(64, activation='relu'),
-    layers.Dropout(0.2),  # Add regularization
-    layers.Dense(32, activation='relu'),
-    layers.Dense(1)
-])
-```
-
-4. **Scalability**
-- Handles large datasets efficiently
-- Can be distributed across multiple GPUs
-- Supports incremental learning
 
 ## Conclusion
 
