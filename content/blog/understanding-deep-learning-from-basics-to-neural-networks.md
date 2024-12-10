@@ -203,6 +203,11 @@ Each type of input requires different preprocessing to work effectively with neu
   output_layer = layers.Dense(10, activation='softmax')
   ```
 
+<figure>
+  <img src="https://aiml.com/wp-content/uploads/2023/08/Illustration-of-a-neural-net-1024x594.png" height="200">
+  <figcaption>Neural Network Architecture. Source: <a href="https://aiml.com/neural-network-architecture/">AIML</a></figcaption>
+</figure>
+
 ### 2. Neurons: The Workers in Our Factory
 
 Each neuron is like a tiny calculator that:
@@ -213,6 +218,19 @@ Each neuron is like a tiny calculator that:
 - Example: A neuron looking at a cat image might give high importance to ear shapes
 
 **Performs Calculations**
+
+Each neuron is just basically a function that takes the inputs, weights and bias and applies the activation function to it. We can imagine it similar to regression, where we have a function that takes the inputs and weights and bias and applies the activation function to it. The difference is that in neural networks, we perform this operation in multiple neurons / units and layers.
+
+An overview of neural network calculation is shown below:
+
+
+<figure>
+  <img src="https://miro.medium.com/v2/resize:fit:1400/1*KNZZYteeBqkJViS1_LT1CQ.gif" height="200">
+  <figcaption>Neural Network Calculation. Source: <a href="https://towardsdatascience.com/building-a-simple-neural-network-from-scratch-a5c6b2eb0c34">Akarsh Saxena</a></figcaption>
+</figure>
+
+
+
 ```python
 # Simplified example of what happens inside a neuron
 def neuron_calculation(inputs, weights, bias):
@@ -230,9 +248,9 @@ def neuron_calculation(inputs, weights, bias):
 **Makes Decisions**
 - Uses activation functions to decide whether to "fire" (activate)
 - Common activation functions and their real-world analogies:
-  - ReLU: Like a bouncer at a club (lets in positive values, stops negatives)
-  - Sigmoid: Like a satisfaction rating (converts numbers to 0-1 scale)
-  - Tanh: Like a review rating (-1 to +1 scale)
+  - ReLU: filters out negative values (lets in positive values, stops negatives)
+  - Sigmoid: converts numbers to 0-1 scale
+  - Tanh: converts numbers to -1 to +1 scale
 
 ### 3. Connections: The Communication Network
 
@@ -255,6 +273,7 @@ def neuron_calculation(inputs, weights, bias):
 - Real-world analogy: Like your personal preference before reviewing evidence
   - If you love cats, you might be biased to see cats everywhere
   - The bias term helps balance this out
+
 
 **Activation Functions in Action**
 
